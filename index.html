@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prisma</title>
+	<meta name="ad.size" content="width=160,height=600">
+	<script type="text/javascript">
+		var clickTag = "";
+	​</script>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;1,400;1,500&display=swap');
+		body{
+			margin: 0;
+		}
+		#bannerAnimado{
+			width:160px; height: 600px; background-color: #FFFFFF; margin: 0 auto; position: relative; overflow: hidden; font-family: 'Rubik', sans-serif; font-style: italic; font-weight: 400; background: url(bg.jpg) no-repeat center bottom; background-size: cover; color: white;
+		}
+		#borde{
+			width: calc(100% - 2px); height: calc(100% - 2px); border: 1px solid #CCCCCC; position: absolute;top: 0; left: 0; z-index: 100; cursor: pointer;
+		}
+		#halo{
+			width: inherit;
+		    height: inherit;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    z-index: 90; 
+		}
+		#halo svg {
+			width: 160px;
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			top: 72%;
+		}
+		#cuadro1{
+			width: calc(90% - 40px);  
+			position: absolute; 
+			top:120px; 
+			left: 5%;
+			z-index: 0;
+			padding: 40px 20px;
+			background: rgb(2,62,133);
+			background: linear-gradient(90deg, rgba(2,62,133,0.8884147408963585) 0%, rgba(2,62,133,0.5354735644257703) 100%);
+			font-size: 18px; line-height: 24px; display: flex; 
+			align-items: center; 
+			justify-content: center;
+			
+			-webkit-border-top-right-radius: 20px;
+			-webkit-border-bottom-left-radius: 20px;
+			-moz-border-radius-topright: 20px;
+			-moz-border-radius-bottomleft: 20px;
+			border-top-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+
+			animation-delay: 3s;
+
+			-webkit-animation: fadeOut 1s ease 3s 1 forwards;
+			   -moz-animation: fadeOut 1s ease 3s 1 forwards;
+			        animation: fadeOut 1s ease 3s 1 forwards; 
+
+		}
+		#logo{
+			position: absolute; 
+			bottom: 0; 
+			left: 0;
+			z-index: 0;
+			width: inherit; height: inherit; 
+			background: url(logo.png) no-repeat center 490px;
+			background-size: contain;
+
+		}
+		#items{
+			position: absolute; 
+			bottom: 0; 
+			left: 5%;
+			z-index: 0;
+			opacity: 0;
+			width: 90%; height: inherit; 
+
+			background: url(items.png) no-repeat center 180px;
+			background-size: contain;
+
+			-webkit-animation: fadeIn 1s ease 3s 1 forwards;
+			   -moz-animation: fadeIn 1s ease 3s 1 forwards;
+			        animation: fadeIn 1s ease 3s 1 forwards; 
+
+
+		}
+		#placa{
+			position: absolute; 
+			bottom: 0; 
+			left: 0;
+			z-index: 0;
+			opacity: 0;
+			width: inherit; height: inherit; 
+			background: rgb(0,71,140);
+			background: linear-gradient(180deg, rgba(0,71,140,1) 0%, rgba(2,62,133,1) 100%);
+
+			-webkit-animation: fadeIn 1s ease 7s 1 forwards;
+			   -moz-animation: fadeIn 1s ease 7s 1 forwards;
+			        animation: fadeIn 1s ease 7s 1 forwards; 
+		}
+		#logo2{
+			position: absolute; 
+			bottom: 0; 
+			left: 0;
+			z-index: 0;
+			opacity: 0;
+			width: inherit; height: inherit; 
+			background: url(logo2.png) no-repeat center 190px;
+			background-size: contain;
+
+
+			-webkit-animation: fadeIn 1s ease 7s 1 forwards;
+			   -moz-animation: fadeIn 1s ease 7s 1 forwards;
+			        animation: fadeIn 1s ease 7s 1 forwards; 
+		}
+		#txt{
+			position: absolute; 
+			top: 270px; 
+			left: 0;
+			z-index: 0;
+			opacity: 0;
+			width: inherit; 
+			font-style: normal;
+			font-weight: 300;
+			font-size: 37px;
+			text-align: center;
+
+			-webkit-animation: fadeIn 1s ease 7s 1 forwards;
+			   -moz-animation: fadeIn 1s ease 7s 1 forwards;
+			        animation: fadeIn 1s ease 7s 1 forwards; 
+		}
+		#boton{
+			background-color: #00B5B6; 
+			width:140px; 
+			height: 40px;
+			line-height: 40px;  
+			text-align: center; 
+			font-size: 16px; 
+			bottom: 30px;
+			left: calc(50% - 140px/2); 
+			position: absolute; 
+			border-radius: 30px;
+			opacity: 0;
+			font-style: normal;
+			font-weight: 500;
+
+			-webkit-animation: fadeIn 1s ease 7s 1 forwards;
+			   -moz-animation: fadeIn 1s ease 7s 1 forwards;
+			        animation: fadeIn 1s ease 7s 1 forwards; 
+		}
+
+		@-webkit-keyframes fadeIn{ 0%{opacity:0;} 100%{opacity:1;}}
+		   @-moz-keyframes fadeIn{ 0%{opacity:0;} 100%{opacity:1;}}
+		        @keyframes fadeIn{ 0%{opacity:0;} 100%{opacity:1;}}
+
+		@-webkit-keyframes fadeOut{ 0%{opacity:1;} 100%{opacity:0;}}
+		   @-moz-keyframes fadeOut{ 0%{opacity:1;} 100%{opacity:0;}}
+		        @keyframes fadeOut{ 0%{opacity:1;} 100%{opacity:0;}}
+
+
+	</style>
+</head>
+<body>
+	<div id="bannerAnimado">
+		<div id="borde"></div>
+		<div id="logo"></div>
+		<div id="halo">
+			<svg width="300px" height="195px">
+			    <defs>  
+					<linearGradient id="halo-gradient"> 
+			            <stop offset="0%" stop-color="#00b1b5">
+			                <animate attributeName="stop-color" values="#00b1b5; #1d4484; #e61d55; #ffd600; #e61d55; #1d4484; #00b1b5;" dur="3s" repeatCount="4"></animate>
+			            </stop>
+
+						<stop offset="20%" stop-color="#1d4484">
+			                <animate attributeName="stop-color" values="#1d4484; #e61d55; #ffd600; #e61d55; #1d4484; #00b1b5; #1d4484" dur="3s" repeatCount="4"></animate>
+			            </stop>
+
+						<stop offset="40%" stop-color="#e61d55">
+			                <animate attributeName="stop-color" values="#e61d55; #ffd600; #e61d55; #1d4484; #00b1b5; #1d4484; #e61d55;" dur="3s" repeatCount="4"></animate>
+			            </stop>
+
+						<stop offset="60%" stop-color="#ffd600">
+			                <animate attributeName="stop-color" values="#ffd600; #e61d55; #1d4484; #00b1b5; #1d4484; #e61d55; #ffd600;" dur="3s" repeatCount="4"></animate>
+			            </stop>
+
+						<stop offset="80%" stop-color="#e61d55">
+			                <animate attributeName="stop-color" values="#e61d55; #1d4484; #00b1b5; #1d4484; #e61d55; #ffd600; #e61d55;" dur="3s" repeatCount="4"></animate>
+			            </stop>
+
+						<stop offset="90%" stop-color="#1d4484">
+			                <animate attributeName="stop-color" values="#1d4484; #00b1b5; #1d4484; #e61d55; #ffd600; #e61d55; #1d4484;" dur="3s" repeatCount="4"></animate>
+			            </stop>
+
+						<stop offset="100%" stop-color="#00b1b5">
+			                <animate attributeName="stop-color" values="#00b1b5; #1d4484; #e61d55; #ffd600; #e61d55; #1d4484; #00b1b5;" dur="3s" repeatCount="4"></animate>
+			            </stop>
+
+			        </linearGradient> 
+			    </defs>
+			    <g>
+			      <path fill="url('#halo-gradient')" d="M312.51,17.34c-12.99,10.56-30.29,9.93-30.39,9.93l-.36-.03h-.56c-.18,.02-17.22,.14-35.75-8.87-3.42-1.66-6.51-3.27-9.5-4.83C222.92,6.76,211.65,.9,190.54,.06c-12.58-.5-35.98,1.68-105.9,23.13C52.53,33.03,21.98,30.31,0,25.4v25.66c11.45,2.25,24.61,3.85,38.9,3.85,16.48,0,34.48-2.13,53.07-7.83,50.35-15.44,82.25-22.65,97.58-22.05,15.52,.62,22.8,4.41,34.86,10.68,2.99,1.56,6.38,3.32,10.11,5.13,22.58,10.98,43.31,11.4,46.72,11.4,2.86,.09,16.54,.14,31.27-6.1V17.34Z"></path>
+			    </g>
+			</svg>
+		</div>
+		<div id="cuadro1">
+			Soluciones<br> para tu comercio <br> que te <br>solucionan <br> la vida.
+		</div>
+		<div id="items"></div>
+		<div id="placa"></div>
+		<div id="logo2"></div>
+		<div id="boton">CONOC&Eacute; M&Aacute;S</div>
+	</div>
+</body>
+</html>
